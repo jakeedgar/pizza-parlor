@@ -13,8 +13,8 @@ body {
   background-color: rgba(245, 245, 220, 0.746);
 }
 .col-md-6 {
-  margin-top: 5%;
-  border: 1px solid #000;
+  padding-top: 1%;
+  border: 3px solid #000;
   height: 300px;
 }
 
