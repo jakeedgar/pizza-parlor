@@ -20,18 +20,19 @@ console.log(myPizza);
 // myPizza.sizePrice();
 
 
-Pizza.prototype.toppingsPrice = function() {
-  let toppings = this.toppings
-  let length = toppings.length
-  console.log(length);
-  console.log(toppings);
-  this.price = 0;
-  for (i = 0; i <= toppings.length; i++)
-
-    this.toppings += this.price
-    return this;
-};
-myPizza.toppingsPrice();
+// Pizza.prototype.toppingsPrice = function() {
+//   let toppings = ["anchovies", "sugar"]
+//   let length = toppings.length
+//   console.log(length);
+//   console.log(toppings);
+//   this.price = 0;
+//   for (i = 0; i <= length; i++)
+//     toppings[i] ++;
+//     this.toppings = toppings;
+//     console.log(toppings);
+//     return this;
+// };
+// myPizza.toppingsPrice();
 
 
 // Test: “It should return a base pizza price with no toppings.”
@@ -41,4 +42,10 @@ myPizza.toppingsPrice();
 // Expected Output: 10
 
 
-
+function toppingsPrice(toppings){
+let toppings = ["anchovies", "sugar"];
+let length = toppings.length();
+this.price = 0;
+for (i = 0; i <= length; i++)
+  toppings[i] ++;
+};
