@@ -1,10 +1,12 @@
+// BUSINESS LOGIC 
+
 function Pizza (toppings, size, price) {
   this.toppings = toppings;
   this.size = size;
   this.price = price;
 }
-let myPizza = new Pizza(["anchovies", "pineapple"], "medium", 0);
-console.log(myPizza);
+// let myPizza = new Pizza(["anchovies", "pineapple"], "medium", 0);
+// console.log(myPizza);
 
 Pizza.prototype.sizePrice = function() {
   this.price = 0;
@@ -17,7 +19,7 @@ Pizza.prototype.sizePrice = function() {
   }
   return this;
 };
-myPizza.sizePrice();
+// myPizza.sizePrice();
 
 Pizza.prototype.toppingsPrice = function() {
   let toppings = this.toppings
@@ -27,12 +29,21 @@ Pizza.prototype.toppingsPrice = function() {
       this.toppings = length;
   };
 
-myPizza.toppingsPrice();
+// myPizza.toppingsPrice();
 
 Pizza.prototype.totalPrice = function() {
   this.price = (this.toppings + this.price);
   return this.price;
 };
 
-myPizza.totalPrice();
+// myPizza.totalPrice();
 
+// USER INTERFACE LOGIC 
+
+$(document).ready(function() {
+  $("#pizza").submit(function(e) {
+    e.preventDefault();
+    const size = $("input:radio[name=size]:checked").val();
+    console.log(size);
+  });
+});
