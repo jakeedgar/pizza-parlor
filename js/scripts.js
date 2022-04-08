@@ -5,8 +5,6 @@ function Pizza (toppings, size, price) {
   this.size = size;
   this.price = price;
 }
-// let myPizza = new Pizza(["anchovies", "pineapple"], "medium", 0);
-// console.log(myPizza);
 
 Pizza.prototype.sizePrice = function() {
   this.price = 0;
@@ -19,7 +17,7 @@ Pizza.prototype.sizePrice = function() {
   }
   return this;
 };
-// myPizza.sizePrice();
+
 
 Pizza.prototype.toppingsPrice = function() {
   let toppings = this.toppings
@@ -38,6 +36,7 @@ Pizza.prototype.totalPrice = function() {
 };
 
 // myPizza.totalPrice();
+// console.log(typeof(myPizza))
 
 
 
@@ -47,17 +46,17 @@ Pizza.prototype.totalPrice = function() {
 $(document).ready(function() {
   $("#pizza").submit(function(e) {
     e.preventDefault();
+    let price = 0;
     const size = $("input:radio[name=size]:checked").val();
-    console.log(typeof(size));
     let toppings = [];
     $("input:checkbox[name=toppings]:checked").each(function() {
     toppings.push($(this).val());
     });
-    let newPizza = new Pizza(toppings, size);
+    let newPizza = new Pizza(toppings, size, price);
     newPizza.sizePrice();
     newPizza.toppingsPrice();
-    finalPizza = newPizza.totalPrice();
-    console.log(finalPizza);
+    let finalPizza = newPizza.totalPrice();
+    $(".output").html(finalPizza.price);
   });
 });
 
