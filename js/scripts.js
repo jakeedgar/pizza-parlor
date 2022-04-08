@@ -46,17 +46,16 @@ Pizza.prototype.totalPrice = function() {
 $(document).ready(function() {
   $("#pizza").submit(function(e) {
     e.preventDefault();
-
     const size = $("input:radio[name=size]:checked").val();
-    console.log(size);
-    let toppings = $("input:checkbox[name=toppings]:checked").each(function() {
-    const checkedToppings = $(this).val();
-    toppings = checkedToppings;
-    return toppings;
+    let toppings = [];
+    $("input:checkbox[name=toppings]:checked").each(function() {
+    toppings.push($(this).val());
     });
-    let newPizza = new Pizza(toppings, size, 0);
-    newPizza = newPizza.totalPrice();
-    console.log(newPizza)
+    let newPizza = new Pizza(toppings, size);
+    newPizza.sizePrice();
+    newPizza.toppingsPrice();
+    finalPizza = newPizza.totalPrice();
+    console.log(finalPizza);
   });
 });
 
