@@ -77,8 +77,10 @@ Expected Output: 12
 * _Any known issues_
 * _should go here_
 
-## License
+## Questions, Comments or Concerns
+* Please email me at jakeedgar1012@gmail.com with any inquires or comments. Thank you. 
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+## License
+Licensed under the [MIT License](LICENSE).
 
 Copyright (c) Jake Edgar
