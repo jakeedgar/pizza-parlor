@@ -33,7 +33,8 @@ Pizza.prototype.toppingsPrice = function() {
 
 Pizza.prototype.totalPrice = function() {
   this.price = (this.toppings + this.price);
-  return this.price;
+  return this;
+
 };
 
 // myPizza.totalPrice();
@@ -47,6 +48,7 @@ $(document).ready(function() {
   $("#pizza").submit(function(e) {
     e.preventDefault();
     const size = $("input:radio[name=size]:checked").val();
+    console.log(typeof(size));
     let toppings = [];
     $("input:checkbox[name=toppings]:checked").each(function() {
     toppings.push($(this).val());
