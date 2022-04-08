@@ -27,6 +27,17 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Tests
 
+Describe: Pizza()
+
+Test: "It should return a Pizza object with two properties one for toppings and one for size"
+Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
+Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
+
+Code: const myPizza = new Pizza(["extra cheese"], "small");
+Alternate Expected Output: Pizza { toppings: ["extra cheese"], size: "small" }
+
+
+
 
 
 ## Known Bugs
