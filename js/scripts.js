@@ -38,12 +38,25 @@ Pizza.prototype.totalPrice = function() {
 
 // myPizza.totalPrice();
 
+
+
 // USER INTERFACE LOGIC 
+
 
 $(document).ready(function() {
   $("#pizza").submit(function(e) {
     e.preventDefault();
+
     const size = $("input:radio[name=size]:checked").val();
     console.log(size);
+    let toppings = $("input:checkbox[name=toppings]:checked").each(function() {
+    const checkedToppings = $(this).val();
+    toppings = checkedToppings;
+    return toppings;
+    });
+    let newPizza = new Pizza(toppings, size, 0);
+    newPizza = newPizza.totalPrice();
+    console.log(newPizza)
   });
 });
+
