@@ -47,7 +47,7 @@ $(document).ready(function() {
     newPizza.sizePrice();
     newPizza.toppingsPrice();
     let finalPizza = newPizza.totalPrice();
-    $(".output").html(finalPizza.price + "$");
+    $(".output").html(finalPizza.price + "$" + " f0r y0ur w a c k y S@L@D!!");
     $("button#sub").hide();
     $("button#another").show();
   });
