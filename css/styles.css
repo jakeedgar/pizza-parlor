@@ -1,11 +1,12 @@
 body {
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Open Sans', sans-serif;
   background-image:url("../img/falling-lettuce.jpg");
   font-size:x-large;
   font-weight: 550;
 }
 
 #header, h3 {
+  font-family: 'Rubik Wet Paint';
   text-align: center;
 }
 .container {
