@@ -36,7 +36,12 @@ Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 Code: const myPizza = new Pizza(["extra cheese"], "small");
 Alternate Expected Output: Pizza { toppings: ["extra cheese"], size: "small" }
 
+Describe: Pizza.prototype.sizePrice();
 
+Test: “It should return a price for each pizza size. 8 for small, 10 for medium, and 12 for large.”
+Code: Let myPizza = new Pizza([], “medium””
+	    myPizza.prototype.sizePrice();
+Expected Output: 10
 
 
 
