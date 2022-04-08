@@ -3,13 +3,13 @@ function Pizza (toppings, size, price) {
   this.size = size;
   this.price = price;
 }
-let myPizza = new Pizza([], "medium", 0);
+let myPizza = new Pizza(["anchovies", "pineapple"], "medium", 0);
 console.log(myPizza);
 
 Pizza.prototype.sizePrice = function() {
   this.price = 0;
   if (this.size === "small") {
-    this.price += 9;
+    this.price += 8;
   } else if (this.size === "medium") {
     this.price += 10;
   } else {
@@ -19,13 +19,20 @@ Pizza.prototype.sizePrice = function() {
 };
 myPizza.sizePrice();
 
-Pizza.prototype.toppingsPrice = function(){
+Pizza.prototype.toppingsPrice = function() {
   let toppings = this.toppings
   let length = toppings.length;
-      console.log(length);
   for (i = 0; i <= length -1; i++)
     length[i]++;
-      return length;
+      this.toppings = length;
   };
 
 myPizza.toppingsPrice();
+
+Pizza.prototype.totalPrice = function() {
+  this.price = (this.toppings + this.price);
+  return this.price;
+};
+
+myPizza.totalPrice();
+

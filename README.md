@@ -45,11 +45,31 @@ Code:
 Expected Output: 10
 
 Describe: Pizza.prototype.toppingsPrice();
-Test: “It should return a base pizza price with no toppings.”
+
+Test: “It should return a 0 for a pizza with no toppings.”
 Code: 
 	Let myPizza = new Pizza([], “medium””
 	myPizza.prototype.toppingsPrice();
-Expected Output: 10
+Expected Output: 0
+
+Test: “It should return a toppings price that changes based on how many toppings the user adds to their pizza.”
+Code: 
+	Let myPizza = new Pizza([“anchovies”], “medium””)
+	myPizza.prototype.toppingsPrice();
+Expected Output: 1
+
+Code: 
+	Let myPizza = new Pizza([“anchovies”, “pineapples”], “medium””)
+	myPizza.prototype.toppingsPrice();
+Alternate Expected Output: 2
+
+Describe: Pizza.prototype.totalPrice();
+
+Test: “It should return a price that takes into account the size and the toppings of each pizza.”
+code: 	
+  Let myPizza = new Pizza([“anchovies”, “pineapples”], “medium””)
+	myPizza.prototype.totalPrice();
+Expected Output: 12
 
 
 ## Known Bugs
@@ -61,4 +81,4 @@ Expected Output: 10
 
 _{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
 
-Copyright (c) _date_ _author name(s)_
+Copyright (c) Jake Edgar
