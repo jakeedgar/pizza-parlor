@@ -10,7 +10,7 @@
 <body>
   <div class="container">
     <h1 id="header">W3LC0M3 T0 S@L@D P1ZZ@</h1>
-    <p>Where every pizza is a crouton! and every salad is W E I R D</p>
+    <h3>Where every pizza is a crouton! and every salad is W E I R D</h3>
     <form id="pizza">
       <div class="row">
         <div class="col-md-6">
@@ -32,7 +32,7 @@
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <p>Please Select your preferred topping(s):</p>
+            <h2 id="sub-header">Please Select your preferred topping(s):</h2>
             <input type="checkbox" name="toppings" value="gravy">Gravy<br>
             <input type="checkbox" name="toppings" value="sweet-tea">Sweet Tea<br>
             <input type="checkbox" name="toppings" value="salt">Salt<br>
@@ -41,9 +41,10 @@
           </div>
         </div>
       </div>
-      <button type="submit">Check Out!</button>
+      <button type="submit" id="sub" class="btn btn-light">Check Out!</button>
     </form>
     <div class="output"></div>
+    <button class="btn btn-dark" id="another" onClick="window.location.reload();">Order Another!</button>
   </div>
 </body>
 </html>

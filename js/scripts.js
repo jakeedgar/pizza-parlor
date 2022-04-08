@@ -18,7 +18,6 @@ Pizza.prototype.sizePrice = function() {
   return this;
 };
 
-
 Pizza.prototype.toppingsPrice = function() {
   let toppings = this.toppings
   let length = toppings.length;
@@ -27,21 +26,13 @@ Pizza.prototype.toppingsPrice = function() {
       this.toppings = length;
   };
 
-// myPizza.toppingsPrice();
-
 Pizza.prototype.totalPrice = function() {
   this.price = (this.toppings + this.price);
   return this;
 
 };
 
-// myPizza.totalPrice();
-// console.log(typeof(myPizza))
-
-
-
 // USER INTERFACE LOGIC 
-
 
 $(document).ready(function() {
   $("#pizza").submit(function(e) {
@@ -56,7 +47,9 @@ $(document).ready(function() {
     newPizza.sizePrice();
     newPizza.toppingsPrice();
     let finalPizza = newPizza.totalPrice();
-    $(".output").html(finalPizza.price);
+    $(".output").html(finalPizza.price + "$");
+    $("button#sub").hide();
+    $("button#another").show();
   });
 });
 
