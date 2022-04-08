@@ -39,10 +39,17 @@ Alternate Expected Output: Pizza { toppings: ["extra cheese"], size: "small" }
 Describe: Pizza.prototype.sizePrice();
 
 Test: “It should return a price for each pizza size. 8 for small, 10 for medium, and 12 for large.”
-Code: Let myPizza = new Pizza([], “medium””
-	    myPizza.prototype.sizePrice();
+Code: 
+  Let myPizza = new Pizza([], “medium””
+	myPizza.prototype.sizePrice();
 Expected Output: 10
 
+Describe: Pizza.prototype.toppingsPrice();
+Test: “It should return a base pizza price with no toppings.”
+Code: 
+	Let myPizza = new Pizza([], “medium””
+	myPizza.prototype.toppingsPrice();
+Expected Output: 10
 
 
 ## Known Bugs
